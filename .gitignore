@@ -1,5 +1,6 @@
 /*.jar
 *.log
+*.iml
 /build
 /lib
 /out
