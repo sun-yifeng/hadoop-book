@@ -7,9 +7,12 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
-public class MaxTemperatureMapper
-  extends Mapper<LongWritable, Text, Text, IntWritable> {
+/**
+ *
+ * */
+public class MaxTemperatureMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
 
+  // 无效温度
   private static final int MISSING = 9999;
   
   @Override
@@ -17,7 +20,9 @@ public class MaxTemperatureMapper
       throws IOException, InterruptedException {
     
     String line = value.toString();
+    // 年份
     String year = line.substring(15, 19);
+    // 温度
     int airTemperature;
     if (line.charAt(87) == '+') { // parseInt doesn't like leading plus signs
       airTemperature = Integer.parseInt(line.substring(88, 92));
