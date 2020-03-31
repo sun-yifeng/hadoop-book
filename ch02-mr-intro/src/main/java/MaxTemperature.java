@@ -22,20 +22,21 @@ public class MaxTemperature {
     }
     
     Job job = new Job();
-    // 在集群环境运行时，不必指明jar文件名称
+    // 1)在集群环境运行时，不必指明jar文件名称
     job.setJarByClass(MaxTemperature.class);
     job.setJobName("Max temperature");
 
-    // 输入输出路径
+    // 2)输入输出路径
     FileInputFormat.addInputPath(job, new Path(args[0]));
+    // 3)输出输出路径
     FileOutputFormat.setOutputPath(job, new Path(args[1]));
-    
+    // 4)指定map和reduce类
     job.setMapperClass(MaxTemperatureMapper.class);
     job.setReducerClass(MaxTemperatureReducer.class);
-
+    // 5)指定输出类型
     job.setOutputKeyClass(Text.class);
     job.setOutputValueClass(IntWritable.class);
-    
+    // 6)是否生成详细输出
     System.exit(job.waitForCompletion(true) ? 0 : 1);
   }
 }

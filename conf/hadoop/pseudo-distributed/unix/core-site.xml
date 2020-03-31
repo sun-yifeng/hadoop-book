@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<!-- core-site.xml -->
+<!-- Unix下是原书的配置 -->
+<!-- core-site.xml    -->
 <configuration>
   <property>
     <name>fs.defaultFS</name>
