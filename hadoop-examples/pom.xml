@@ -57,8 +57,10 @@
         <executions>
           <execution>
             <id>make-assembly</id>
+            <!-- 绑定到package生命周期 -->
             <phase>package</phase>
             <goals>
+              <!-- 只运行一次 -->
               <goal>single</goal>
             </goals>
             <configuration>
