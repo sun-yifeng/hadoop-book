@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<?xml version="1.0"?>
 <!--
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -13,14 +12,8 @@
   See the License for the specific language governing permissions and
   limitations under the License. See accompanying LICENSE file.
 -->
-
-<!-- Put site-specific property overrides in this file. -->
-
 <configuration>
-	<property>
-		<name>fs.defaultFS</name>
-		<!-- 默认hdfs的访问端口8020,不是9000 -->
-        <!-- <value>hdfs://localhost:9000</value> -->
-		<value>hdfs://localhost/</value>
-	</property>
+
+<!-- Site specific YARN configuration properties -->
+
 </configuration>

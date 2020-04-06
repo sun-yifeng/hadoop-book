@@ -17,10 +17,4 @@
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
-	<property>
-		<name>fs.defaultFS</name>
-		<!-- 默认hdfs的访问端口8020,不是9000 -->
-        <!-- <value>hdfs://localhost:9000</value> -->
-		<value>hdfs://localhost/</value>
-	</property>
 </configuration>

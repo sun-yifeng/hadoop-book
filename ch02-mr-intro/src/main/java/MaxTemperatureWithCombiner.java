@@ -7,6 +7,9 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 // vv MaxTemperatureWithCombiner
+/**
+ * combiner函数的输出作为reduce函数的输入，可以节省数据传输
+ */
 public class MaxTemperatureWithCombiner {
 
   public static void main(String[] args) throws Exception {
@@ -24,6 +27,7 @@ public class MaxTemperatureWithCombiner {
     FileOutputFormat.setOutputPath(job, new Path(args[1]));
     
     job.setMapperClass(MaxTemperatureMapper.class);
+    // 多出此行
     /*[*/job.setCombinerClass(MaxTemperatureReducer.class)/*]*/;
     job.setReducerClass(MaxTemperatureReducer.class);
 

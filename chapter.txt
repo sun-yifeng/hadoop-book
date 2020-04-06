@@ -4,7 +4,7 @@ https://www.jianshu.com/p/aa8cfaa26790
 2 查看版本(没有-符号)
 hadoop version
 
-3 启动
+3 启动hdfs, 如果运行mapreduce程序，不需启动hdfs，文件复制等需要启动
 sbin/start-dsf.sh
 sbin/start-yarn.sh
 sbin/mr-jobhistory-daemon.sh start historyserver

@@ -5,4 +5,4 @@ set HADOOP_CLASSPATH=../hadoop-examples.jar;
 @rem 删除out
 @rem hadoop fs -rm -f -R output
 @rem 用cmd script运行
-hadoop MaxTemperature ../input/ncdc/sample.txt output
+hadoop URLCat hdfs://localhost/user/tom/quangle.txt

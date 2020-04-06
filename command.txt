@@ -1,0 +1,7 @@
+hadoop fs -help         P50  帮助信息
+hadoop fs -mkdir books  P51  新建目录
+hadoop fs -ls .         P51  列出文件
+hadoop fs -copyFromLocal input/docs/quangle.txt \ hdfs://localhsot/user/tom/quangle.txt  P50 复制
+hadoop fs -ls file:///  P53  列出本地文件系统根目录下的文件、
+
+hdfs fsck / -files -blocks P45 列出文件系统中各文件由哪些块组成
